@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif; 
+    color: #333;
+}
+
+/* header h1 */
+header h1 {
+    text-align: center;
+    font-size: 4rem;
+ }
+
+header h1 a:link{
+    text-decoration: none;
+    color: #666;
+}  
+header h1 a:visited{
+    color: #666;
+}
+
+/* nav items */
+header nav {
+    margin: 0 10px 0 10px;
+    border-top: 2px solid #d0d0d0;
+    border-bottom: 2px solid #d0d0d0;
+}
+header nav ul li a:link{
+    text-decoration: none;
+    color: #666;
+}  
+header nav ul li a:visited{
+    color: #666;
+}
+header nav ul li a:active{
+    color: #DEB887;
+}
+header nav ul li a:hover{
+    color: #00ddff;
+    text-decoration: none;
+    
+}
+h1, h2, h3, h4, h5, h6{
+font-family:  'Lora', 'Serif';
+}
+header ul {
+    padding-left: 0;
+}
+li{
+    text-align: center;
+    font-size: 1.5rem;
+    list-style: none;
+    margin:10px;
+}
+
+.post-content h2 a:link{
+    text-decoration: none;
+    margin-top: 20px;
+    color:#333;
+    
+}
+.post-content h2 a:visited{
+    color:#333;
+}
+.post-content h2 a:active{
+    color:#DEB887;
+}
+.post-content h2 a:hover{
+    color:#00ddff;
+}
+
+main{
+    
+    margin: 0;
+    grid-area: main;
+}
+.post-date{
+    text-align: right;
+    margin: 30px 15px 15px 0;
+    font-size: 1.5rem;
+}
+article{
+    border-bottom: 2px dotted #d0d0d0;
+} 
+
+section h2 {
+    border-top: 2px solid #d0d0d0;
+    margin: 15px;
+}
+
+figure {
+    width: 60%;
+    margin: auto;
+}
+img{
+    text-align:center;
+    width: 100%;
+}
+
+p {
+    margin-left: 15px;
+}
+
+p a:link{
+    text-decoration: none;
+    margin-top: 20px;
+    color:#666;
+    
+}
+p a:visited{
+    color:#666;
+}
+p a:active{
+    color:#DEB887;
+}
+p a:hover{
+    color:#00ddff;
+}
+
+@media screen and (min-width: 700px){
+    
+nav ul{
+    display: flex;
+    flex-direction: row; 
+    justify-content: right;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.post-date {
+    grid-column: 1/2;
+    text-align: center;
+    margin-right: 0;
+}
+
+.post-content {
+    grid-column: 2/5;
+}
+
+article {
+    border-bottom: none;
+}
+section {
+    border-left: 2px solid #d0d0d0;
+    border-bottom: 2px dotted #d0d0d0;
+}
+section h2 {
+    border-top: none;
+}
+
+p {
+    margin-right: 15px;
+}
+
+}
