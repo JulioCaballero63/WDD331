@@ -19,38 +19,10 @@ h1, h2, h3, h4 {
 #contactform input, #contactform textarea {
   background-color: white;
   flex: 2;
-}
-@media (max-width: 20em) {
-  #contactform input, #contactform textarea {
-    width: 90%;
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media (max-width: 31em) {
-  #contactform input, #contactform textarea {
-    width: 90%;
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media (max-width: 31em) {
-  #contactform {
-    width: 90%;
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media (max-width: 60em) {
-  #contactform {
-    width: 90%;
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  width: 90%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #contactform fieldset {
@@ -59,6 +31,7 @@ h1, h2, h3, h4 {
 
 #contactform [type=submit] {
   width: max-content;
+  margin-top: 1em;
 }
 
 #contactform fieldset > div {
@@ -66,29 +39,31 @@ h1, h2, h3, h4 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 1em;
 }
 #contactform fieldset > div label {
+  text-align: right;
+  margin-right: 1em;
   flex: 1;
-  text-align: left;
 }
-@media (max-width: 60em) {
+@media (max-width: 20em) {
   #contactform fieldset > div {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row nowrap;
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    margin-bottom: 1em;
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
   }
   #contactform fieldset > div label {
-    text-align: right;
-    margin-right: 1em;
+    flex: 1;
+    text-align: left;
+    margin-left: 0.5em;
   }
 }
 

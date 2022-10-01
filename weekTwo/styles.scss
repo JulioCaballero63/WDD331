@@ -63,13 +63,8 @@ h1,h2,h3,h4 {
     input, textarea {
         background-color: $input-color;
         flex: 2;
-
-    @include breakpoint(small) { @include center }
-    @include breakpoint(medium) {  @include center }
+        @include center();
     }
-
-    @include breakpoint(medium) { @include center }
-    @include breakpoint(large) { @include center }
 }
 
 #contactform fieldset {
@@ -78,26 +73,30 @@ h1,h2,h3,h4 {
 
 #contactform [type="submit"] {
 width: max-content;
+margin-top: 1em;
 }
 
 #contactform fieldset>div {
-    @include flex-container(column);
-    
-    
-    label {
-            flex: 1;
-            text-align: left;
-        }
-    @include breakpoint(large) {
-        @include flex-container(row);
-        justify-content: space-between;
-        margin-bottom: 1em;
+    @include flex-container(row);
+    justify-content: space-between;
+            margin-bottom: 1em;
+  
         label {
-            text-align: right;
-            margin-right: 1em;
-        }
-    }
-               
+                text-align: right;
+                margin-right: 1em;
+                flex: 1;
+            }
+        @include breakpoint(small) {
+            @include flex-container(column);
+        
+            label {
+                flex: 1;
+                text-align: left;
+                margin-left: .5em;
+            }
+
+            }
+                
 }
 
 
