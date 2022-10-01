@@ -1,0 +1,107 @@
+//Variables 
+
+//colors
+$body-background-color: rgb(133, 0, 0);
+$form-background-color: rgb(232, 232, 195);
+$input-color: white;
+$headlines-color : rgb(239, 239, 244);
+
+//set breakpoint sizes
+$break-small: 20em;
+$break-medium: 31em;
+$break-large: 60em;
+
+//mixin for flex
+@mixin flex-container($axis, $wrap: nowrap) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: $axis $wrap;
+    -ms-flex-flow: $axis $wrap;
+    flex-flow: $axis $wrap;
+}
+
+//break points
+@mixin breakpoint($break) {
+    @if $break == large {
+    @media (max-width: $break-large) { @content; }
+    }
+    @else if $break == medium {
+    @media (max-width: $break-medium) { @content; }
+    }
+    @else if $break == small {
+    @media (max-width: $break-small) { @content; }
+    } @else {
+    @media ($break) { @content; }
+    }
+    } 
+
+//center
+@mixin center {
+    width: 90%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #content {
+      @include center;
+  }
+
+//body
+body {
+    background-color: $body-background-color;          
+    }  
+
+h1,h2,h3,h4 {
+    color: $headlines-color;
+}
+
+#contactform {
+    background-color: $form-background-color;
+     
+    input, textarea {
+        background-color: $input-color;
+        flex: 2;
+
+    @include breakpoint(small) { @include center }
+    @include breakpoint(medium) {  @include center }
+    }
+
+    @include breakpoint(medium) { @include center }
+    @include breakpoint(large) { @include center }
+}
+
+#contactform fieldset {
+    background-color:rgb(243, 237, 169);
+}
+
+#contactform [type="submit"] {
+width: max-content;
+}
+
+#contactform fieldset>div {
+    @include flex-container(column);
+    
+    
+    label {
+            flex: 1;
+            text-align: left;
+        }
+    @include breakpoint(large) {
+        @include flex-container(row);
+        justify-content: space-between;
+        margin-bottom: 1em;
+        label {
+            text-align: right;
+            margin-right: 1em;
+        }
+    }
+               
+}
+
+
+
+
+ 
+

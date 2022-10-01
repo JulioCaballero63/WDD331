@@ -1,0 +1,95 @@
+#content {
+  width: 90%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background-color: rgb(133, 0, 0);
+}
+
+h1, h2, h3, h4 {
+  color: rgb(239, 239, 244);
+}
+
+#contactform {
+  background-color: rgb(232, 232, 195);
+}
+#contactform input, #contactform textarea {
+  background-color: white;
+  flex: 2;
+}
+@media (max-width: 20em) {
+  #contactform input, #contactform textarea {
+    width: 90%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 31em) {
+  #contactform input, #contactform textarea {
+    width: 90%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 31em) {
+  #contactform {
+    width: 90%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 60em) {
+  #contactform {
+    width: 90%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#contactform fieldset {
+  background-color: rgb(243, 237, 169);
+}
+
+#contactform [type=submit] {
+  width: max-content;
+}
+
+#contactform fieldset > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+#contactform fieldset > div label {
+  flex: 1;
+  text-align: left;
+}
+@media (max-width: 60em) {
+  #contactform fieldset > div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+  #contactform fieldset > div label {
+    text-align: right;
+    margin-right: 1em;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
