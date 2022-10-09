@@ -18,7 +18,7 @@
   text-transform: uppercase;
   color: $color;
 }
-@mixin divider($color: $accent1) {
+@mixin divider($color: $midBlue) {
   border-top: 1px solid $color;
   margin-top: 1em;
   padding-top: 1.5em;
@@ -31,7 +31,7 @@ h4 {
   margin: 0;
 }
 h1 {
-  background: $accent1;
+  background: $darkBlue;
   color: $text-light;
   display: inline-block;
   font-weight: normal;
@@ -73,5 +73,5 @@ a {
   transition: border-color 0.2s ease-in-out;
 }
 a:hover {
-  border-color: $accent1;
+  border-color: $midBlue;
 }
