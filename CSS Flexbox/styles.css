@@ -28,9 +28,13 @@
 /* Flexbox column display */
 .col-grid {
     display: flex;
-    flex-flow: column;
+    flex-flow: column wrap;
+    height: 300vw;
+
 }
 
-.col-grid img {
-    max-height: 100%;
+
+
+.col-grid .card {
+  flex:  1 1 auto;
 }
