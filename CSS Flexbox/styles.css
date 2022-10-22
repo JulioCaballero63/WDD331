@@ -29,12 +29,17 @@
 .col-grid {
     display: flex;
     flex-flow: column wrap;
-    height: 300vw;
-
+    height: calc(4600px - 180vw);
+  align-content: center;
 }
 
 
 
 .col-grid .card {
   flex:  1 1 auto;
+}
+
+.col-grid .card img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
